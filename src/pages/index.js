@@ -7,19 +7,25 @@
  */
 
 import {Helmet} from "react-helmet";
+import ShareCard from "../components/head/share-card";
 
 import data from "../../data/data.json";
 
-export const getStaticProps = async () => ({props:data});
+export const getStaticProps = () => ({props: data});
 
-export default ({title}) => (
+export default ({title, cards: {twitter, facebook}}) => (
     <div>
-        <Helmet htmlAttributes={{lang:"en"}}>
+        <Helmet htmlAttributes={{lang: "en"}}>
             <title>{"leny.me - Pierre-Antoine Delnatte"}</title>
-            <meta httpEquiv={"X-Clacks-Overhead"} content={"GNU Terry Pratchett"} />
+            <meta
+                httpEquiv={"X-Clacks-Overhead"}
+                content={"GNU Terry Pratchett"}
+            />
         </Helmet>
+        <ShareCard type={"twitter"} {...twitter} />
+        <ShareCard type={"facebook"} {...facebook} />
         <main>
             <h1>{title}</h1>
         </main>
     </div>
-)
+);
