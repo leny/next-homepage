@@ -6,6 +6,8 @@
  * started at 20/02/2021
  */
 
-const Homepage = () => <div>{"Hello world!"}</div>;
+import data from "../../data/data.json";
 
-export default Homepage;
+export const getStaticProps = async () => ({props:data});
+
+export default ({title}) => <div>{title}</div>;
