@@ -4,7 +4,9 @@
   "private": true,
   "description": "Remake of my homepage with Next.js instead of Gatsby",
   "scripts": {
-    "lint": "npx eslint --fix --cache src"
+    "lint": "npx eslint --fix --cache src",
+    "work": "npx next dev",
+    "build": "npx next build"
   },
   "repository": {
     "type": "git",
@@ -42,5 +44,10 @@
     "hooks": {
       "pre-commit": "npx lint-staged"
     }
+  },
+  "dependencies": {
+    "next": "^10.0.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }

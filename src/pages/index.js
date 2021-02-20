@@ -6,8 +6,6 @@
  * started at 20/02/2021
  */
 
-const Homepage = ()=>(
-    <div>{"Hello world!"}</div>
-);
+const Homepage = () => <div>{"Hello world!"}</div>;
 
 export default Homepage;
